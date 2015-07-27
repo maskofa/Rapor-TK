@@ -1,0 +1,353 @@
+inherited frmMasterKompetensi: TfrmMasterKompetensi
+  Left = 199
+  Top = 127
+  Caption = 'frmMasterKompetensi'
+  ClientHeight = 446
+  ClientWidth = 544
+  OldCreateOrder = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited mmSQL: TMemo
+    Left = 328
+    Lines.Strings = (
+      'select * from tbkompetensi'
+      'select * from tbkompetensi where kompetensi_id=:id'
+      'insert into tbkompetensi values(:auto, :name)'
+      
+        'update tbkompetensi set kompetensi_name=:name where kompetensi_i' +
+        'd=:id'
+      'delete from tbkompetensi where kompetensi_id=:id'
+      'select max(kompetensi_id) as maxid from tbkompetensi')
+  end
+  inherited mRibbon: TAdvToolBarPager
+    Width = 544
+    Height = 445
+    Caption.Caption = '..:: Master Data Kompetensi ::..'
+    inherited m10: TAdvPage
+      Width = 536
+      Height = 413
+      inherited Label1: TLabel
+        Width = 69
+        Caption = 'Kompetensi ID'
+      end
+      object Label2: TLabel [1]
+        Left = 24
+        Top = 99
+        Width = 85
+        Height = 13
+        Caption = 'Kompetensi Nama'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        Transparent = True
+      end
+      inherited AdvSmoothPanel1: TAdvSmoothPanel
+        Width = 536
+        inherited btnNew: TAdvGlowButton
+          Hint = 'edNama'
+        end
+        inherited btnEdit: TAdvGlowButton
+          Hint = 'edNama'
+        end
+      end
+      inherited sgData: TAdvColumnGrid
+        Tag = 2
+        Top = 128
+        Width = 497
+        Height = 273
+        Hint = 'Kompetensi'
+        ColumnHeaders.Strings = (
+          'No.'
+          ''
+          'NAMA KOMPETENSI'
+          'User Name')
+        FixedColWidth = 40
+        Columns = <
+          item
+            AutoMinSize = 0
+            AutoMaxSize = 0
+            Alignment = taCenter
+            Borders = []
+            BorderPen.Color = clSilver
+            CheckFalse = 'N'
+            CheckTrue = 'Y'
+            Color = clWindow
+            ColumnPopupType = cpFixedCellsRClick
+            DropDownCount = 8
+            EditLength = 0
+            Editor = edNormal
+            FilterCaseSensitive = False
+            Fixed = False
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Header = 'No.'
+            HeaderAlignment = taCenter
+            HeaderFont.Charset = DEFAULT_CHARSET
+            HeaderFont.Color = clWindowText
+            HeaderFont.Height = -11
+            HeaderFont.Name = 'Tahoma'
+            HeaderFont.Style = []
+            MinSize = 0
+            MaxSize = 0
+            Password = False
+            PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+            PrintColor = clWhite
+            PrintFont.Charset = DEFAULT_CHARSET
+            PrintFont.Color = clWindowText
+            PrintFont.Height = -11
+            PrintFont.Name = 'MS Sans Serif'
+            PrintFont.Style = []
+            ReadOnly = True
+            ShowBands = False
+            SortStyle = ssAutomatic
+            SpinMax = 0
+            SpinMin = 0
+            SpinStep = 1
+            Tag = 0
+            Width = 40
+          end
+          item
+            AutoMinSize = 0
+            AutoMaxSize = 0
+            Alignment = taLeftJustify
+            Borders = []
+            BorderPen.Color = clSilver
+            CheckFalse = 'N'
+            CheckTrue = 'Y'
+            Color = clWindow
+            ColumnPopupType = cpFixedCellsRClick
+            DropDownCount = 8
+            EditLength = 0
+            Editor = edNormal
+            FilterCaseSensitive = False
+            Fixed = False
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            HeaderAlignment = taCenter
+            HeaderFont.Charset = DEFAULT_CHARSET
+            HeaderFont.Color = clWindowText
+            HeaderFont.Height = -11
+            HeaderFont.Name = 'Tahoma'
+            HeaderFont.Style = []
+            MinSize = 0
+            MaxSize = 0
+            Password = False
+            PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+            PrintColor = clWhite
+            PrintFont.Charset = DEFAULT_CHARSET
+            PrintFont.Color = clWindowText
+            PrintFont.Height = -11
+            PrintFont.Name = 'MS Sans Serif'
+            PrintFont.Style = []
+            ReadOnly = True
+            ShowBands = False
+            SortStyle = ssAutomatic
+            SpinMax = 0
+            SpinMin = 0
+            SpinStep = 1
+            Tag = 0
+            Width = 0
+          end
+          item
+            AutoMinSize = 0
+            AutoMaxSize = 0
+            Alignment = taLeftJustify
+            Borders = []
+            BorderPen.Color = clSilver
+            CheckFalse = 'N'
+            CheckTrue = 'Y'
+            Color = clWindow
+            ColumnPopupType = cpFixedCellsRClick
+            DropDownCount = 8
+            EditLength = 0
+            Editor = edNormal
+            FilterCaseSensitive = False
+            Fixed = False
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Header = 'NAMA KOMPETENSI'
+            HeaderAlignment = taCenter
+            HeaderFont.Charset = DEFAULT_CHARSET
+            HeaderFont.Color = clWindowText
+            HeaderFont.Height = -11
+            HeaderFont.Name = 'Tahoma'
+            HeaderFont.Style = [fsBold]
+            MinSize = 0
+            MaxSize = 0
+            Password = False
+            PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+            PrintColor = clWhite
+            PrintFont.Charset = DEFAULT_CHARSET
+            PrintFont.Color = clWindowText
+            PrintFont.Height = -11
+            PrintFont.Name = 'MS Sans Serif'
+            PrintFont.Style = []
+            ReadOnly = True
+            ShowBands = False
+            SortStyle = ssAutomatic
+            SpinMax = 0
+            SpinMin = 0
+            SpinStep = 1
+            Tag = 0
+            Width = 419
+          end
+          item
+            AutoMinSize = 0
+            AutoMaxSize = 0
+            Alignment = taLeftJustify
+            Borders = []
+            BorderPen.Color = clSilver
+            CheckFalse = 'N'
+            CheckTrue = 'Y'
+            Color = clWindow
+            ColumnPopupType = cpFixedCellsRClick
+            DropDownCount = 8
+            EditLength = 0
+            Editor = edNormal
+            FilterCaseSensitive = False
+            Fixed = False
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Header = 'User Name'
+            HeaderAlignment = taCenter
+            HeaderFont.Charset = DEFAULT_CHARSET
+            HeaderFont.Color = clWindowText
+            HeaderFont.Height = -11
+            HeaderFont.Name = 'Tahoma'
+            HeaderFont.Style = []
+            MinSize = 0
+            MaxSize = 0
+            Password = False
+            PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+            PrintColor = clWhite
+            PrintFont.Charset = DEFAULT_CHARSET
+            PrintFont.Color = clWindowText
+            PrintFont.Height = -11
+            PrintFont.Name = 'MS Sans Serif'
+            PrintFont.Style = []
+            ReadOnly = True
+            ShowBands = False
+            SortStyle = ssAutomatic
+            SpinMax = 0
+            SpinMin = 0
+            SpinStep = 1
+            Tag = 0
+            Width = 0
+          end
+          item
+            AutoMinSize = 0
+            AutoMaxSize = 0
+            Alignment = taLeftJustify
+            Borders = []
+            BorderPen.Color = clSilver
+            CheckFalse = 'N'
+            CheckTrue = 'Y'
+            Color = clWindow
+            ColumnPopupType = cpFixedCellsRClick
+            DropDownCount = 8
+            EditLength = 0
+            Editor = edNormal
+            FilterCaseSensitive = False
+            Fixed = False
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            HeaderAlignment = taCenter
+            HeaderFont.Charset = DEFAULT_CHARSET
+            HeaderFont.Color = clWindowText
+            HeaderFont.Height = -11
+            HeaderFont.Name = 'Tahoma'
+            HeaderFont.Style = []
+            MinSize = 0
+            MaxSize = 0
+            Password = False
+            PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+            PrintColor = clWhite
+            PrintFont.Charset = DEFAULT_CHARSET
+            PrintFont.Color = clWindowText
+            PrintFont.Height = -11
+            PrintFont.Name = 'MS Sans Serif'
+            PrintFont.Style = []
+            ReadOnly = True
+            ShowBands = False
+            SortStyle = ssAutomatic
+            SpinMax = 0
+            SpinMin = 0
+            SpinStep = 1
+            Tag = 0
+            Width = 0
+          end>
+        ColWidths = (
+          40
+          0
+          419
+          0
+          0)
+      end
+      inherited edID: TEdit
+        Tag = 1
+        Left = 112
+        Hint = 'kompetensi_id'
+        HelpType = htKeyword
+        HelpKeyword = 'id'
+        ReadOnly = True
+      end
+      object edNama: TEdit
+        Tag = 2
+        Left = 112
+        Top = 96
+        Width = 409
+        Height = 19
+        Hint = 'kompetensi_name'
+        HelpType = htKeyword
+        HelpKeyword = 'name'
+        HelpContext = 18
+        BevelOuter = bvNone
+        CharCase = ecUpperCase
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 3
+      end
+      object cbCaps: TCheckBox
+        Left = 344
+        Top = 73
+        Width = 177
+        Height = 17
+        Caption = 'Penggunaan Huruf Besar Semua'
+        Checked = True
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 4
+        OnClick = cbCapsClick
+      end
+    end
+  end
+end

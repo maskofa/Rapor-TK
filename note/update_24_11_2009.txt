@@ -1,0 +1,13 @@
+Update : 24 November 2009
+
+Report;
+====================
+1. Preview Langsung Persiswa (Cover_biodata, isi, dan halaman belakang langsung jadi satu);
+2. Ada Peringatan pada tombol preview bila siswa belum dipilih
+3. Untuk tombol preview Pakai Click Kiri (bukan pake Click Kanan lagi);
+4. Ditambah tombol Option (Pint Option), berguna untuk memilih bagian-bagian mana saja yang akan diPrint atau diPreview (ada tiga bagian Cover_biodata, isi, dan halaman belakang)
+
+
+Data Siswa;
+====================
+5. Agama, Pendidikan pada Field Ayah & Ibu dikasih pilihan strip ("-")

@@ -1,0 +1,20 @@
+[SHARE][VALIDASI IP ADDRESS]Maaf, numpang share min,
+Validasi IP Address pada TEdit menggunakan Dephi7.
+[Sekedar untuk pembelajaran dan melatih logika]
+
+Aturan validasi :
+
+1. Key yang diijinkan 0..9, backspace (#8), dan titik (.);
+2. Karakter pertama tidak boleh titik (.);
+3. Di kanan (di belakang) titik tidak boleh ada titik lagi;
+   menghindari titik jejer;
+4. Di kiri (di depan) titik tidak boleh ada titik lagi;
+   menghindari titik jejer;
+5. jika angka sebelumnya (awal blok) adalah nol, maka nol ditimpa dengan Key;
+6. Jumlah titik tidak boleh lebih dari 3 (tiga) / terdiri dari 4 blok;
+7. setiap blok (ada 4 blok) mempunyai nilai maximal 255;
+
+Terima Kasih. S'Moga bermanfaat.
+
+PasteBin : http://pastebin.com/gPn38ETD
+Source : http://tutorial.maskofa.com/delphi/Validasi_ip_address.zip
